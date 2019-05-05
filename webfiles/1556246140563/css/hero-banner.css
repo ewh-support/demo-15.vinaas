@@ -1,0 +1,66 @@
+section.overlay-banner{
+    background: black;
+}
+
+section.overlay-banner .bg-img, section.mobile-swap .banner-overlay-container{
+    display: none;
+}
+
+section.overlay-banner .bg-img img{
+    opacity: .75;
+}
+
+section.overlay-banner img.banner-overlay{
+    width: 750px !important;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    opacity: .8;
+}
+
+section.overlay-banner .banner-content{
+    position: relative;
+    margin: 92px 0 0;
+}
+
+@media screen and (max-width: 425px){
+    section.overlay-banner .bg-img{
+        display: block;
+    }
+
+    section.overlay-banner .banner-overlay{
+        display: none;
+    }
+
+    section.mobile-swap .bg-img img{
+        width: 100% !important;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 595px){
+    section.overlay-banner .banner-overlay{
+        bottom: 50px;
+    }
+}
+
+/* second-level tall banners */
+section.second-level-banner.tall {
+    height: 700px;
+}
+
+section.second-level-banner.tall .text-center h1{
+    margin: 0 auto;
+    line-height: 1.2;
+}
+
+
+@media screen and (max-width: 767px) and (min-width: 596px){
+    section.second-level-banner.tall {
+        height: 450px;
+    }
+}
+
+@media screen and (max-width: 595px){
+    section.second-level-banner.tall {
+        height: 400px;
+    }
+}

@@ -1,0 +1,147 @@
+/* Contact Us popup form CSS */
+
+section.popup-form{
+    display: none;
+    max-width: 400px;
+    position: fixed;
+    float: none;
+    right: 0;
+    padding: 10px 0;
+    border: 5px solid #666;
+    z-index: 100;
+}
+
+section.popup-form .input-box input{
+    padding: 9px 9px 9px;
+}
+
+section.popup-form .selectboxit-container .selectboxit {
+    padding: 2px 9px 1px;
+}
+
+@media (max-width: 768px){
+    section.popup-form, button.contact-btn{
+        display: none !important;
+    }
+}
+
+button.contact-btn{
+    display: none;
+    cursor: pointer;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-style: hidden;
+    width: 160px;
+    bottom: 55%;
+    height: 37px;
+    margin-right: -62px;
+    transform: rotate(-90deg);
+    position: fixed;
+    right: 0;
+    z-index: 3;
+    box-shadow: -2px -4px 30px rgba(0, 0, 0, .25);
+}
+
+section#contactPopupForm.active + button.contact-btn{
+    right: 400px;
+    z-index: 10;
+}
+
+
+button.contact-btn:hover{
+    /*height: 39px;*/
+    /*width: 164px;*/
+}
+
+button.contact-btn span{
+    color: white;
+    font-weight: 700;
+}
+
+button.contact-btn:hover span{
+    transition: .1s;
+}
+
+button.contact-btn:focus{
+    outline: none;
+}
+
+svg.contact-icon{
+    margin-top: 5px;
+}
+
+section.popup-form .terms-container a, .ui-tooltip a{
+    position: relative;
+    display: inline-block;
+    font-size: 11px;
+    color: #00ace0;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+section.popup-form .terms-container a:before, .ui-tooltip a:before{
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #00ace0;
+    -webkit-transform: scale3d(0, 1, 1);
+    -moz-transform: scale3d(0, 1, 1);
+    -ms-transform: scale3d(0, 1, 1);
+    transform: scale3d(0, 1, 1);
+    -webkit-transition: -webkit-transform 0.1s;
+    -moz-transition: trasform 0.1s;
+    -ms-transition: trasform 0.1s;
+    transition: transform 0.1s;
+}
+
+section.popup-form .terms-container a:hover:before, .ui-tooltip a:hover:before{
+    -webkit-transform: scale3d(1, 1, 1);
+    -moz-transform: scale3d(1, 1, 1);
+    -ms-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+section.popup-form .head p{
+    font-size: 13px;
+}
+
+section.popup-form .registration-btn .red-btn {
+    padding: 2px 82px 2px 77px;
+}
+
+section.popup-form .terms-container .checkbox-message-container {
+    width: 90%;
+}
+
+section.popup-form .checkbox-container input[type="checkbox"] {
+    margin: auto;
+    display: block;
+}
+
+section.popup-form .checkbox-container {
+    display: inline-block;
+
+}
+
+section.popup-form .checkbox-message-container {
+    vertical-align: middle;
+}
+
+section.popup-form .terms-container p{
+    font-size: 11px;
+}
+
+section.popup-form .text-box textarea{
+    min-height: 100px;
+}

@@ -1,0 +1,202 @@
+.enquiry-form .input-box, .enquiry-form .text-box,
+.enquiry-form .select-box select,
+.enquiry-form .selectboxit-container .selectboxit {
+    border: none !important;
+}
+
+.enquiry-form .text-box textarea {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.enquiry-form .fieldAssistance {
+    padding: 10px 5px 5px;
+    background-color: #f3f3f3;
+    display: none;
+}
+
+.enquiry-form .fieldAssistance p{
+    font-size: 14px;
+    color: black;
+    font-weight: bold;
+    text-align: left;
+}
+
+.form-overlay .enquiry-form .fieldAssistance {
+    background-color: white;
+}
+
+.enquiry-form .field-focus {
+    background-color: lightgrey;
+}
+
+.enquiry-form .input-box input,
+.enquiry-form .select-box select + span,
+.enquiry-form .text-box textarea {
+    border: 1px solid #666;
+}
+
+/* intialized, non-required fields */
+.enquiry-form .input-box input.ng-pristine.ng-untouched.ng-valid.ng-empty,
+.enquiry-form .select-box select.ng-pristine.ng-untouched.ng-valid.ng-empty,
+.enquiry-form .text-box textarea.ng-pristine.ng-untouched.ng-valid.ng-empty {
+    border: 1px solid #666;
+}
+
+/** class: uvf-* (unique-validation-field) is for fields that do not use angular regex to determine validity **/
+
+/* valid */
+.enquiry-form .input-box input:not([data-type='email']).ng-valid,
+.enquiry-form .input-box input:not([data-type^='phone']).ng-valid,
+.enquiry-form .input-box input.uvf-valid,
+.enquiry-form .select-box select.ng-valid + span,
+.enquiry-form .text-box textarea.ng-valid {
+    border: 1px solid #00b9be;
+}
+
+.enquiry-form .input-box:focus input:not([data-type='email']).ng-valid,
+.enquiry-form .input-box:focus input:not([data-type^='phone']).ng-valid,
+.enquiry-form .input-box:focus input.uvf-valid,
+.enquiry-form .select-box:focus select.ng-valid + span,
+.enquiry-form .text-box:focus textarea.ng-valid {
+    border: 1px solid #00b9be;
+}
+
+/* error */
+.enquiry-form .input-box input.has-error,
+.enquiry-form .input-box input.uvf-invalid,
+.enquiry-form .input-box input.uvf-invalid.ng-valid,
+.enquiry-form .select-box select.uvf-invalid.ng-valid + span,
+.enquiry-form .select-box select.has-error + span,
+.enquiry-form .text-box textarea.input-error {
+    border: 1px solid #eb4971;
+}
+
+.enquiry-form .input-box:hover input:not([data-type='email']).has-error,
+.enquiry-form .input-box:hover input:not([data-type^='phone']).has-error,
+.enquiry-form .input-box:hover input.uvf-invalid,
+.enquiry-form .input-box:hover input.uvf-invalid.ng-valid,
+.enquiry-form .select-box:hover select.uvf-invalid.ng-valid + span,
+.enquiry-form .select-box:hover select.has-error + span,
+.enquiry-form .text-box:hover textarea.input-error {
+    border: 1px solid #eb4971;
+}
+
+/* optional */
+.enquiry-form .optional-field,
+.enquiry-form .text-box textarea.optional-field.ng-valid {
+    border: 1px solid #666;
+}
+
+.enquiry-form .optional-field ~ .field-icon{
+    display: none;
+}
+
+.enquiry-form .field-icon {
+    top: 13px;
+    position: absolute;
+    right: 8px;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+}
+
+.enquiry-form .select-box .field-icon{
+    cursor: pointer;
+}
+
+.enquiry-form .input-box input:not([data-type='email']).ng-valid + .field-icon,
+.enquiry-form .input-box input:not([data-type^='phone']).ng-valid + .field-icon,
+.enquiry-form .input-box input.uvf-valid.ng-valid + .field-icon,
+.enquiry-form .text-box textarea.ng-valid + .field-icon {
+    background: url(../../../binaries/content/gallery/website/icons/teal-checkmark.svg) no-repeat 50%;
+    background-size: 100%;
+}
+
+.enquiry-form .select-box select.ng-valid.optional-field + .field-icon {
+    background: none;
+}
+
+.enquiry-form .select-box select.ng-valid ~ span.selectboxit-container.selectboxit-container i.selectboxit-arrow {
+    background: url(../../../binaries/content/gallery/website/icons/teal-dropdown.svg) no-repeat 50%;
+    background-size: 100%;
+}
+
+.enquiry-form .input-box input.ng-invalid.has-error + .field-icon,
+.enquiry-form .input-box input.uvf-invalid.ng-valid + .field-icon,
+.enquiry-form .select-box select.input-error.ng-invalid + .field-icon {
+    background: url(../../../binaries/content/gallery/website/icons/pink-error.svg) no-repeat 50%;
+    background-size: 100%;
+}
+
+.enquiry-form .select-box select.ng-invalid.optional-field + .field-icon {
+    background: none;
+}
+
+.enquiry-form .select-box select.ng-invalid.has-error ~ span.selectboxit-container.selectboxit-container i.selectboxit-arrow,
+.enquiry-form .select-box select.uvf-invalid.ng-valid ~ span.selectboxit-container.selectboxit-container i.selectboxit-arrow {
+    background: url(../../../binaries/content/gallery/website/icons/pink-dropdown.svg) no-repeat 50%;
+    background-size: 100%;
+}
+
+@media screen and (max-width: 480px) {
+    .enquiry-form .field-icon {
+        top: 8px;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.enquiry-form .select-box select[name='Country'] ~ .selectboxit-container .selectboxit-options a,
+.enquiry-form .select-box select[name='State'] ~ .selectboxit-container .selectboxit-options a,
+.enquiry-form .select-box select[name='Country'] ~ .selectboxit-container span.selectboxit-text,
+.enquiry-form .select-box select[name='State'] ~ .selectboxit-container span.selectboxit-text {
+    text-transform: uppercase;
+}
+
+.enquiry-form .selectboxit-arrow-container {
+    right: 5px;
+}
+
+.enquiry-form .selectboxit .selectboxit-arrow-container .selectboxit-arrow {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    background: url(../../../binaries/content/gallery/website/icons/black-dropdown.svg) no-repeat 50%;
+    background-size: 100%;
+}
+
+.enquiry-form .selectboxit-default-arrow {
+    width: 0;
+    height: 0;
+    border: none;
+}
+
+/* registration button */
+.enquiry-form .registration-btn button:disabled{
+    background-color: #f3f3f3;
+    border: 1px solid #666682;
+    color: #666682;
+}
+
+.enquiry-form .registration-btn button.disabled,
+.enquiry-form .registration-btn button:disabled:hover,
+.enquiry-form .registration-btn button:disabled:focus,
+.enquiry-form .registration-btn button:disabled:active,
+.enquiry-form .registration-btn button:disabled:visited{
+    color: #666682;
+    cursor: default;
+}
+
+/* popup form only */
+section.popup-form .fieldAssistance p{
+    font-size: 13px;
+}
+
+section.popup-form .field-icon {
+    top: 8px;
+}

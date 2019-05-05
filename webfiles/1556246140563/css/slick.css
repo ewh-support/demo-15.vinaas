@@ -1,0 +1,235 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+.text-slider{
+    width: 100%;
+    margin: 0 auto;
+    background: #59c4bc;
+    padding: 0;
+}
+.text-slider .slider-wrapper{
+    position: relative;
+}
+.text-slider .slider-container{
+    overflow: hidden;
+    position: relative;
+    display: block;
+    width: calc(100% - 160px);
+    margin: 0 auto;
+}
+.text-slider .slick-initialized .slick-slide{
+    position: absolute;
+    height: auto;
+    width: 100%;
+    background: #59c4bc;
+    padding: 17px 20px 16px 20px;
+    width: calc(100% - 160px);
+    top: 0;
+    text-align: center;
+}
+
+.text-slider .slide-text{
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.text-slider .slide-text p{
+    color: #fff;
+    display: inline-block;
+    padding: 5px 20px;
+}
+.text-slider .slide-text img{
+    display: inline-block;
+}
+
+.text-slider .slick-next,.text-slider .slick-prev{
+    position: absolute;
+    right: 0;
+    top: calc(50% - 19px);
+    z-index: 1;
+    text-align: center;
+    cursor: pointer;
+    opacity: 0.45;
+    background-color: transparent;
+    width: 30px;
+}
+
+.text-slider .slick-prev{
+    left: 0px
+}
+
+.text-slider .slick-next{
+    right: 0px;
+}
+
+.text-slider .slide-btn .next:hover,
+.text-slider .slide-btn .prev:hover{
+    opacity: 1;
+}
+
+.text-slider .slick-prev:after{
+        content:'';
+    display: block;
+    background: url('https://www.couchbase.com/wp-content/themes/dome9/images/we/light-prev-arrow.png');
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 39px;
+    z-index: 2;
+}
+
+.text-slider .slick-next:after{
+    content:'';
+    display: block;
+    background: url('https://www.couchbase.com/wp-content/themes/dome9/images/we/light-next-arrow.png');
+    background-repeat: no-repeat;
+    width: 22px;
+    height: 39px;
+    z-index: 2;
+}
+.text-slider .slide-text:focus{
+    outline: none;
+}
+
+.text-slider .slide-text a:focus{
+    outline: none;
+}
+@media (max-width: 767px)and (min-width: 596px) {
+    .text-slider .slide-text img {
+        display: block; 
+        margin: 0 auto;
+
+    }
+
+    .text-slider .slide-text p {
+        display: block;
+        padding: 0;
+    }
+    
+        .text-slider .slick-initialized .slick-slide {
+        padding: 15px 30px 15px 30px;
+    }
+    
+}
+@media (max-width: 595px){
+    .text-slider .slick-initialized .slick-slide {
+        padding: 15px 30px 15px 30px;
+    }
+}

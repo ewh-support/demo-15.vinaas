@@ -32,7 +32,7 @@ input:focus{
 }
 /* Solution Block: Start */
 .solution-block {
-  padding: 112px 0 55px;
+  padding: 88px 0 0px;
 }
 .solution-block .container {
   max-width: 1285px;
